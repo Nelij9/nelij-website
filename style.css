@@ -1,0 +1,109 @@
+@import url('https://fonts.google.com/css?family=Montserrat:500');
+
+:root {
+    --clr-header-dark: #111111;
+    --clr-header-light: #cccccc;
+    --clr-font-dark: #111111;
+    --clr-font-light: #edf0f1;
+    --clr-bg-dark: rgb(31, 31, 31);
+    --clr-bg-light: rgb(255, 255, 255);
+    --clr-hover-dark: orange;
+    --clr-hover-light: yellow;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.light-mode {
+    --clr-header-light: #111111;
+    --clr-header-dark: #cccccc;
+    --clr-font-light: #111111;
+    --clr-font-dark: #edf0f1;
+    --clr-bg-light: rgb(31, 31, 31);
+    --clr-bg-dark: rgb(255, 255, 255);
+    --clr-hover-light: orange;
+    --clr-hover-dark: yellow;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--clr-font-light);
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    position: fixed;
+    width: 100%;
+    background-color: var(--clr-header-dark);
+}
+
+.bar {
+    position: fixed;
+    z-index: 1;
+    background-color: var(--clr-hover-dark);
+    height: 10px;
+    width: 100%;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.4s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: var(--clr-hover-dark);
+}
+
+button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: var(--clr-hover-dark);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+
+body {
+    background-color: var(--clr-bg-dark);
+}
+
+.theme-toggle {
+    background-color: var(--clr-header-dark);
+    border-radius: 50px;
+    padding: 9px 25px;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+}
